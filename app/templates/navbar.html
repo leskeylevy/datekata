@@ -1,18 +1,44 @@
-<!--HamBurger Icon-->
-<div class="bars" id="nav-action">
-  <span class="bar"> </span>
-</div>
+<div class="navbar navbar-inverse" role="navigation">
 
-<!--Navbar Links-->
-<nav id="nav">
-  <ul>
-    <li class="shape-circle circle-one"><a href="#">Contact</a></li>
-    <li class="shape-circle circle-two"><a href="#">Chatroom</a></li>
-    <li class="shape-circle circle-three"><a href="#">Sign in</a></li>
-    <li class="shape-circle circle-five">
-      <a href="#">Home</a>
-    </li>
-  </ul>
-</nav>
+    <div class="container-fluid">
+
+      <div class="navbar-header">
+
+        <a class="navbar-brand" href="/"> DATE KATA<i class="em em-clock1"></i> </a>
+      </div>
 
 
+      <div class="navbar-collapse collapse">
+
+        <ul class="nav navbar-nav">
+
+          <li><a href="/">Home</a></li>
+        </ul>      
+
+        <ul class="nav navbar-nav navbar-right">
+
+          {% if current_user.is_authenticated %}
+
+          <li class="navbar-brand" >{{current_user.username}}</li>
+          
+          <li><a href="{{url_for('auth.logout')}}">Log out</a></li>
+
+          {% else %}
+
+
+
+          <li><a href="{{url_for('auth.register')}}">Register</a></li>
+          <li class="divider"></li>
+
+
+
+          <li><a href="{{url_for('auth.login')}}">Login</a></li>
+          {% endif %}
+
+
+
+        </ul>
+        
+      </div>
+    </div>
+  </div>
