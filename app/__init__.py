@@ -4,7 +4,7 @@ from config import config_options
 
 from flask_login import LoginManager
 from flask_mail import Mail
-# from flask_simplemde import SimpleMDE
+from flask_simplemde import SimpleMDE
 
 login_manager = LoginManager()
 login_manager.session_protection = 'strong'
@@ -12,7 +12,7 @@ login_manager.login_view = 'github.login'
 
 bootstrap = Bootstrap()
 mail = Mail()
-# simple = SimpleMDE()
+simple = SimpleMDE()
 
 
 def create_app(config_name):
@@ -25,7 +25,7 @@ def create_app(config_name):
     bootstrap.init_app(app)
     mail.init_app(app)
     login_manager.init_app(app)
-    # simple.init_app(app)
+    simple.init_app(app)
 
     # Registering the  main blueprint
     from .main import main as main_blueprint
