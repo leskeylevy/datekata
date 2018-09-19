@@ -1,34 +1,46 @@
-<div class="navbar navbar-inverse" role="navigation" style="background-color:green; border:white;">
-       <div class="container-fluid">
-           <div class="navbar-header">
-               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                 <span class="sr-only">Toggle navigation</span>
-                 <span class="icon-bar"></span>
-                 <span class="icon-bar"></span>
-                 <span class="icon-bar"></span>
-               </button>
-               <a class="navbar-brand" href="/">Date-Kata</a>
-           </div>
-           <div class="navbar-collapse collapse">
-               <ul class="nav navbar-nav">
-                   <li><a href="/inspiration/posts/">Web development</a></li>
-                    <li><a href="/Education/posts/">Mobile development</a></li>
-                    <li><a href="/News/posts/">Data Science</a></li>
-                    <li><a href="/Editors/posts/">Application Development.</a></li>
-                    <li><a href="/">Security Software Development</a></li>
-                   </a>
-                 </ul>
-              <ul class="nav navbar-nav navbar-right">
-                  {% if current_user.is_authenticated %}
-                    <li><a href="{{url_for('main.profile',uname=current_user.username)}}" style="color:black; font-weight:bolder;">Profile</a></li>
-                <li><a href="{{url_for('main.profile',uname=current_user.username)}}" style="color:black; font-weight:bolder;">{{current_user.username}}</a></li>
-                <li><a href="{{url_for('auth.logout')}}" style="color:black; font-weight:bolder;">Sign out</a></li>
-                {% else %}
-                <li><a href="{{url_for('auth.login')}}" style="color:black; font-weight:bolder;">Log in</a></li>
+<div class="navbar navbar-inverse" role="navigation">
 
-                  {%endif%}
-                </ul>
+    <div class="container-fluid">
 
-                    </div>
+      <div class="navbar-header">
 
-       </div>
+        <a class="navbar-brand" href="/"> DATE KATA<i class="em em-clock1"></i> </a>
+      </div>
+
+
+      <div class="navbar-collapse collapse">
+
+        <ul class="nav navbar-nav">
+
+          <li><a href="/">Home</a></li>
+        </ul>      
+
+        <ul class="nav navbar-nav navbar-right">
+
+          {% if current_user.is_authenticated %}
+
+          <li class="navbar-brand" >{{current_user.username}}</li>
+          
+          <li><a href="{{url_for('auth.logout')}}">Log out</a></li>
+
+          {% else %}
+
+
+
+          <li><a href="{{url_for('auth.register')}}">Register</a></li>
+          <li class="divider"></li>
+
+
+
+          <li><a href="{{url_for('auth.login')}}">Login</a></li>
+          {% endif %}
+
+
+
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+
+  
