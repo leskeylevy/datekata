@@ -1,0 +1,461 @@
+================================
+
+/*## INDEX PAGE ##*/
+
+=================================
+
+
+body {
+  font-family: "Ubuntu", sans-serif;
+  color: #65676f;
+}
+a {
+  text-decoration: none;
+}
+
+
+
+* {
+  box-sizing: border-box; 
+}
+
+body {
+  margin: 0; 
+  font-weight: 500;
+  font-family: 'HelveticaNeue';
+}
+
+section {
+  width: 100%;
+  padding: 0 7%;
+  display: table;
+  margin: 0;
+  max-width: none;
+  background-color: #373B44;
+  height: 100vh;
+  
+  &:nth-of-type(2n) {
+    background-color: #FE4B74;
+  }
+}
+
+.intro {
+  height: 90vh;
+}
+
+.content {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+h1 {
+  font-size: 3em;
+  display: block;
+  color: white;
+  font-weight: 300;
+}
+
+p {
+  font-size: 1.5em;
+  font-weight: 500;
+  color: #C3CAD9;
+}
+
+a {
+  font-weight: 700;
+  color: #373B44;
+  position: relative;
+  
+  &:hover{ 
+    opacity: 0.8;
+  }
+  
+  &:active {
+    top: 1px;
+  }
+}
+
+
+=================================
+/*####### NAV ########*/
+=================================
+
+
+
+nav {
+  position: absolute;
+  width: 100%;
+  top: 300px;
+  background-color: #FF0059;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 3;
+  transition: height 0.6s 0.6s;
+  left: 0;
+}
+.fixed-nav {
+  position: fixed;
+  height: 35px;
+  top: 0px;
+}
+.logo-box {
+  display: flex;
+  align-items: center;
+  transition: margin-left 0.6s
+}
+.fixed-logo-box {
+  margin-left: 20%;
+}
+.logo {
+  height: 25px;
+  width: 30px;
+  border: thick solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 1em;
+  transition: border-color 0.6s, transform 0.6s;
+}
+.logo div {
+  height: 8px;
+  width: 10px;
+  border: thick solid white;
+  transition: border-color 0.6s, transform 0.6s;
+}
+.logo-title {
+  color: white;
+  font-weight: bold;
+  padding: 0.7em;
+  transition: color 0.6s;
+}
+.fixed-logo {
+  border-color: #FF0059;
+  color: #FF0059;
+  transform: rotate(360deg);
+}
+.logo-box:hover .logo {
+  border-color: #1CFFCA;
+}
+.logo-box:hover .logo div {
+  border-color: #1CFFCA;
+  transform: rotate(180deg);
+}
+nav ul {
+  display: flex;
+  margin-right: 1em;
+  transition: margin-right 0.6s;
+}
+.fixed-links {
+  margin-right: 20%;
+}
+nav ul li a {
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+  padding: 1.5em;
+}
+nav ul li a:hover {
+  color: #1CFFCA;
+}
+
+===================================
+/*####### HEADER #########*/
+===================================
+
+header {
+  position: relative;
+  height: 300px;
+  z-index: 1;
+  background-color: #2e313d;
+}
+.intro-background {
+  height: 100%;
+  width: 100%;
+  background-image: url("http://images6.fanpop.com/image/photos/36000000/nature-mother-nature-36002556-1920-1080.jpg");
+  background-size: cover;
+}
+.intro-heading {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  top: 0px;
+  height: 300px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.35);
+}
+.intro-heading h1 {
+  color: white;
+  font-size: 30px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.logo-heading {
+  height: 25px;
+  width: 30px;
+  border: thick solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 1em;
+  transition: border-color 0.6s, transform 0.6s;
+}
+.logo-heading div {
+  height: 8px;
+  width: 10px;
+  border: thick solid white;
+  transition: border-color 0.6s;
+}
+.intro-heading:hover .logo-heading {
+  border-color: #1CFFCA;
+}
+.intro-heading:hover .logo-heading div {
+  border-color: #1CFFCA;
+}
+
+
+
+=================================
+
+/*##### MAIN CONTENT #########*/
+
+=================================
+main {
+  position: relative;
+  margin-top: 56px;
+  padding: 2em 0;
+  line-height: 1.8;
+  background-color: #f0f1e7;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+}
+.main-content {
+  width: 70%;
+}
+.main-content h2 {
+  font-size: 28px;
+}
+.main-content p {
+  margin: 1em 0px;
+}
+
+
+
+==========================
+/*FOOTER SECTION*/
+==========================
+
+$primary-light-blue: #8DB9ED;
+$primary-line-color: #ccc;
+* {
+  box-sizing: border-box
+}
+html, body {
+  height: 100%
+}
+body {
+  font: 11px "Open Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: auto;
+  display: flex;
+  flex-flow: column nowrap;
+  //This justify-content is essentially unnecessary in Firefox and Chrome due to the flex: 1 1 auto on the main.  However, it's needed to push the footer down on IE11
+  justify-content: space-between
+}
+ul {
+  list-style: none
+}
+a {
+  text-decoration: none
+}
+.generic-anchor {
+  color: $primary-light-blue;
+  &:visited {
+    color: $primary-light-blue
+  }
+  &:hover {
+    color: $primary-line-color
+  }
+}
+.flex-rw {
+  display: flex;
+  flex-flow: row wrap;
+}
+//This main is mostly to push the footer to the bottom and for demo purposes.
+main {
+  flex: 1 1 auto; //For IE11
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 10em "Oswald", sans-serif;
+  color: rgb(155,155,155);
+  line-height: 1
+}
+footer {
+  background: rgb(55,55,55);
+  margin-top: auto;
+  width: 100%
+}
+.footer-list-top {
+  width: 33.333%
+}
+.footer-list-top > li {
+  text-align: center;
+  padding-bottom: 10px
+}
+.footer-list-header {
+  padding: 10px 0 5px 0;
+  color: #fff;
+  font: 2.3vw "Oswald", sans-serif
+}
+.footer-list-anchor {
+  font: 1.3em "Open Sans", sans-serif
+}
+.footer-social-section {
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+  margin-top: 5px;
+}
+.footer-social-section::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 10px;
+  border-top: 1px solid $primary-line-color;
+  width: calc(100% - 20px)
+}
+.footer-social-overlap {
+  position: relative;
+  z-index: 2;
+  background: rgb(55,55,55);
+  padding: 0 20px
+}
+.footer-social-connect {
+  display: flex;
+  align-items: center;
+  font: 3.5em "Oswald", sans-serif;
+  color: #fff
+}
+.footer-social-small {
+  font-size: 0.6em;
+  padding: 0px 20px
+}
+.footer-social-overlap > a {
+  font-size: 3em
+}
+.footer-social-overlap > a:not(:first-child) {
+  margin-left: 0.38em
+}
+.footer-bottom-section {
+  width: 100%;
+  padding: 10px;
+  border-top: 1px solid $primary-line-color;
+  margin-top: 10px
+}
+.footer-bottom-section > div:first-child {
+  margin-right: auto
+}
+.footer-bottom-wrapper {
+  font-size: 1.5em;
+  color: #fff
+}
+.footer-address {
+  display: inline;
+  font-style: normal
+}
+@media only screen and (max-width: 768px) {
+  .footer-list-header {
+    font-size: 2em
+  }
+  .footer-list-anchor {
+    font-size: 1.1em
+  }
+  .footer-social-connect {
+    font-size: 2.5em
+  }
+  .footer-social-overlap > a {
+    font-size: 2.24em
+  }
+  .footer-bottom-wrapper {
+    font-size: 1.3em
+  }
+}
+@media only screen and (max-width: 568px) {
+  main {
+    font-size: 5em
+  }
+  .footer-list-top {
+    width: 100%
+  }
+  .footer-list-header {
+    font-size: 3em;
+  }
+  .footer-list-anchor {
+    font-size: 1.5em
+  }
+  .footer-social-section {
+    justify-content: center
+  }
+  .footer-social-section::after {
+    top: 25%
+  }
+  .footer-social-connect {
+    margin-bottom: 10px;
+    padding: 0 10px
+  }
+  .footer-social-overlap {
+    display: flex;
+    justify-content: center;
+  }
+  .footer-social-icons-wrapper {
+    width: 100%;
+    padding: 0
+  }
+  .footer-social-overlap > a:not(:first-child) {
+    margin-left: 20px;
+  }
+  .footer-bottom-section {
+    padding: 0 5px 10px 5px
+  }
+  .footer-bottom-wrapper {
+    text-align: center;
+    width: 100%;
+    margin-top: 10px
+  }
+}
+@media only screen and (max-width: 480px) {
+  .footer-social-overlap > a {
+    margin: auto
+  }
+  .footer-social-overlap > a:not(:first-child) {
+    margin-left: 0;
+  }
+  .footer-bottom-rights {
+    display: block
+  }
+}
+@media only screen and (max-width: 320px) {
+  .footer-list-header {
+    font-size: 2.2em
+  }
+  .footer-list-anchor {
+    font-size: 1.2em
+  }
+  .footer-social-connect {
+    font-size: 2.4em
+  }
+  .footer-social-overlap > a {
+    font-size: 2.24em
+  }
+  .footer-bottom-wrapper {
+    font-size: 1.3em
+  }
+}
