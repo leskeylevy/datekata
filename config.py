@@ -2,11 +2,10 @@ import os
 
 
 class Config:
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://feisal:1234@localhost/kata'
-    # GITHUB_API_KEY = os.environ.get('GITHUB_API_KEY')
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://levy:newpassword@localhost/chat'
     SECRET_KEY = os.environ.get('SECRET_KEY')
-    # CLIENT_ID = os.environ.get('CLIENT_ID')
-    # CLIENT_SECRET =os.environ.get('CLIENT_SECRET')
+    SQLALCHEMY_TRACK_MODIFICATIONS = False
+
 
 class ProdConfig(Config):
     pass
