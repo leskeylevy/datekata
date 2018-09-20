@@ -10,10 +10,10 @@
         <a class="nav-link" href="/"> <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Features</a>
+        <a class="nav-link" href="#">View other profiles</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Pricing</a>
+        <a class="nav-link" href="#">Coding challenges</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">About</a>
@@ -21,7 +21,7 @@
     </ul>
     <ul class="nav navbar-nav navbar-right">
                   {% if current_user.is_authenticated %}
-                <li><a href="{{url_for('main.profile',uname=current_user.username)}}" style="color:blue; font-weight:bolder;">{{current_user.username}}</a></li>
+                <li><a href="{{url_for('main.profile',uname=current_user.username)}}" style="color:white; font-weight:bolder;">{{current_user.username}}</a></li>
                 <li><a href="{{url_for('auth.logout')}}" style="color:blue; font-weight:bolder;">Sign out</a></li>
                 {% else %}
                 <li><a href="{{url_for('auth.login')}}" style="color:blue; font-weight:bolder;">Log in</a></li>
