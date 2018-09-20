@@ -1,5 +1,5 @@
 import requests as req
-from .consts import Languages
+from app.codewarsapi.codewarsapi.consts import Languages
 from pprint import pprint
 import os
 

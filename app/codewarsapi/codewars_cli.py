@@ -1,11 +1,11 @@
 #!/usr/bin/env python
 # TODO: Don't have this in sublime text module
-from app.main.codewarsapi.codewarsession import pretty_print_response
+from app.codewarsapi.codewars_api.codewarsession import pretty_print_response
 
 try:
-    from . codewarsapi.codewarssession import CodeWarsSession
+    from app.codewarsapi import CodeWarsSession
 except Exception as e:
-    from .codewarsapi.codewarssession import CodeWarsSession
+    from app.codewarsapi import CodeWarsSession
 import argparse
 
 import json

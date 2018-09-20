@@ -1,5 +1,5 @@
-from . import api_threads
-from . import utils
+from .. import api_threads
+from .. import utils
 from pprint import pprint
 
 import sublime

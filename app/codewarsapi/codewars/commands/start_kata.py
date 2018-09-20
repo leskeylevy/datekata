@@ -1,6 +1,6 @@
-from . import utils
+from .. import utils
 
-from . import api_threads
+from .. import api_threads
 import sublime
 import sublime_plugin
 

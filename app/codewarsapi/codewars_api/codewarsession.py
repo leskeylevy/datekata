@@ -1,4 +1,4 @@
-from .codewarsapi import CodeWarsAPI
+from .codewarsapi.codewarsapi import CodeWarsAPI
 import json
 import time
 import os.path
