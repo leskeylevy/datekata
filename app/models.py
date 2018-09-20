@@ -4,6 +4,15 @@ import hashlib
 from werkzeug.security import generate_password_hash, check_password_hash
 
 
+class Github_username:
+    '''
+    getting github users name to use in the login
+    '''
+    def __init__(self,username):
+        self.username = username
+
+
+
 # callback function for flask-login extentsion
 @login_manager.user_loader
 def load_user(user_id):
