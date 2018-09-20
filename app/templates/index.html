@@ -1,20 +1,18 @@
 {% extends 'base.html'%}
-{% import 'bootstrap/wtf.html' as wtf%}
-{% import 'macros.html' as macro %}
-{% block styles%}
-{{ super() }}
-<link href="https://fonts.googleapis.com/css?family=Akronim|Bellefair|Joti+One" rel="stylesheet">
-<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-
-{% endblock %}
 {% block content %}
-<span style="font-size:40px; font-family: 'Bellefair', cursive;"></span>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-9">
-
-        </div>
-
-
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--<link rel="stylesheet" type="text/css" media="screen" href="main.css" />-->
+    <!--<script src="main.js"></script>-->
+</head>
+<body style="background-image: url({{ url_for('static', filename='images/bg2.jpg') }});background-repeat: no-repeat; background-size: cover">
+<h1 style="text-align: center; font-size: 150px; color: red; padding-top: 10%">DATEKATA</h1>
+ <h4 style="color: orange; text-align: center; font-size: 60px">~love is not found,It's developed</h4>
 <div class="container">
     <form>
         <input type="text" name="user_query" placeholder="Search for a User" class="form-control">
@@ -22,4 +20,6 @@
     </form>
 
 </div>
+</body>
+</html>
 {% endblock %}
