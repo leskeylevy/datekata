@@ -52,7 +52,8 @@ class User(UserMixin, db.Model):
 
 class Follow(db.Model):
     __tablename__ = 'follows'
-    followers = db.Column(db.Integer, db.ForeignKey('users.id'), primary_key=True)
+    id= db.Column(db.Integer, primary_key=True)
+    follows_id = db.Column(db.Integer, db.ForeignKey('users.id'), primary_key=True)
 
     def __repr__(self):
         return f'Followed {self.follower_id}'
