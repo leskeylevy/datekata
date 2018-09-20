@@ -71,7 +71,7 @@ def search(username):
     username = '+'.join(username_list)
     searched_users = get_github_user(username)
     if searched_users:
-        return render_template('auth/register.html')
+        return redirect(url_for('auth.register'))
     else:
         return render_template('404.html')
     title = f'search results for {username}'
