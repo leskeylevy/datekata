@@ -2,9 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6d95d3ec-2ea7-45d9-920f-fcb2419ef469" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../app/templates/auth/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../app/templates/auth/register.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../app/templates/navbar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../app/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/auth/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../app/auth/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/auth/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/../app/auth/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/auth/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../app/auth/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/github/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/../app/github/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/github/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../app/github/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/main/errors.py" beforeDir="false" afterPath="$PROJECT_DIR$/../app/main/errors.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/main/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/../app/main/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../app/main/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../app/main/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../app/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/../app/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../app/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../config.py" beforeDir="false" afterPath="$PROJECT_DIR$/../config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/../manage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../start.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../start.sh" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -50,16 +69,16 @@
       <usages-collector id="statistics.lifecycle.project">
         <counts>
           <entry key="project.closed" value="1" />
-          <entry key="project.open.time.16" value="2" />
+          <entry key="project.open.time.16" value="3" />
           <entry key="project.open.time.49" value="1" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="html" value="1" />
           <entry key="md" value="1" />
-          <entry key="py" value="24" />
+          <entry key="py" value="25" />
           <entry key="sh" value="1" />
           <entry key="txt" value="3" />
         </counts>
@@ -70,7 +89,7 @@
           <entry key="HTML" value="1" />
           <entry key="Markdown" value="1" />
           <entry key="PLAIN_TEXT" value="3" />
-          <entry key="Python" value="24" />
+          <entry key="Python" value="25" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -96,23 +115,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../app/github/__init__.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="31" selection-start-line="1" selection-end-line="1" selection-end-column="31" />
-            </state>
-          </provider>
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../app/github/forms.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../config.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
-              <folding>
-                <element signature="e#28#59#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="165">
+              <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -120,12 +132,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../app/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="14" selection-start-line="14" selection-end-line="14" />
-              <folding>
-                <element signature="e#0#23#0" expanded="true" />
-              </folding>
-            </state>
+            <state relative-caret-position="-90" />
           </provider>
         </entry>
       </file>
@@ -137,23 +144,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../app/github/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="28" column="19" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="19" />
-              <folding>
-                <element signature="e#0#68#0" expanded="true" />
-                <marker date="1537263782242" expanded="true" signature="1042:1121" ph="..." />
-              </folding>
-            </state>
+            <state relative-caret-position="-90" />
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../start.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" selection-start-line="6" selection-end-line="6" />
-            </state>
-          </provider>
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -172,22 +169,13 @@
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../app/main/__init__.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" selection-start-line="4" selection-end-line="4" />
-            </state>
-          </provider>
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../app/main/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="98">
-              <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-              <folding>
-                <element signature="e#0#75#0" expanded="true" />
-              </folding>
-            </state>
+            <state relative-caret-position="-90" />
           </provider>
         </entry>
       </file>
@@ -206,7 +194,6 @@
         <option value="$PROJECT_DIR$/../runtime.txt" />
         <option value="$PROJECT_DIR$/../README.md" />
         <option value="$PROJECT_DIR$/../app/main/errors.py" />
-        <option value="$PROJECT_DIR$/../config.py" />
         <option value="$PROJECT_DIR$/../manage.py" />
         <option value="$PROJECT_DIR$/../app/email.py" />
         <option value="$PROJECT_DIR$/../app/github/__init__.py" />
@@ -218,6 +205,7 @@
         <option value="$PROJECT_DIR$/../app/__init__.py" />
         <option value="$PROJECT_DIR$/../app/templates/404.html" />
         <option value="$PROJECT_DIR$/../app/main/views.py" />
+        <option value="$PROJECT_DIR$/../config.py" />
       </list>
     </option>
   </component>
@@ -296,7 +284,7 @@
     <frame x="0" y="25" width="667" height="741" extended-state="4" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1552795" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30124223" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -373,13 +361,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="7" lean-forward="true" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../runtime.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -400,30 +381,18 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../app/github/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/../app/github/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-          <folding>
-            <element signature="e#28#59#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/../app/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
-        </state>
+        <state relative-caret-position="-90" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../app/templates/404.html">
@@ -431,14 +400,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../app/github/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="28" column="19" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#68#0" expanded="true" />
-            <marker date="1537263782242" expanded="true" signature="1042:1121" ph="..." />
-          </folding>
-        </state>
+        <state relative-caret-position="-90" />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../start.sh">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/../instance/config.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -450,34 +416,18 @@
     <entry file="file://$PROJECT_DIR$/../instance/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/../start.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../app/main/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/../app/main/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#75#0" expanded="true" />
-          </folding>
-        </state>
+        <state relative-caret-position="-90" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../app/github/__init__.py">
+    <entry file="file://$PROJECT_DIR$/../config.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="31" selection-start-line="1" selection-end-line="1" selection-end-column="31" />
+        <state relative-caret-position="165">
+          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
         </state>
       </provider>
     </entry>

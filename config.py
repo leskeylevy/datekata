@@ -2,12 +2,11 @@ import os
 
 
 class Config:
-    GITHUB_API_KEY = os.environ.get('GITHUB_API_KEY')
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://feisal:1234@localhost/kata'
+    # GITHUB_API_KEY = os.environ.get('GITHUB_API_KEY')
     SECRET_KEY = os.environ.get('SECRET_KEY')
-
-    @staticmethod
-    def init_app(app):
-        pass
+    # CLIENT_ID = os.environ.get('CLIENT_ID')
+    # CLIENT_SECRET =os.environ.get('CLIENT_SECRET')
 
 
 class ProdConfig(Config):
