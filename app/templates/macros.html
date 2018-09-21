@@ -1,0 +1,16 @@
+{% macro displayKata(kata) %}
+    {% for kata in katas %}
+        <div class="list-group">
+            <p class="list-group-item list-group-item-action active">
+            {{ kata.title }}
+            </p>
+            <p class="list-group-item list-group-item-action">
+                {{ kata.kata | truncate(500) }}
+            </p>
+            <p class="list-group-item list-group-item-action disabled">
+                <a href="{{ url_for('.single_article',id = article.id) }}">continue reading . . .</a>
+                 <span class="badge badge-primary badge-pill">Posted : {{kata.posted}} </span>
+            </p>
+        </div>
+    {% endfor %}
+{% endmacro %}

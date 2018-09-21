@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% import 'macros.html' as macro %}
+
+{% block body %}
+    <div class="container">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item active"> {{ category }}  </li>
+            </ol>
+
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+                {% if katas %}
+                    {{ macro.displayKata(katas) }}
+                {% else %}
+                    It appears no challenges under this category has been published . Yet !
+                {% endif %}
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+    </div>
+{% endblock %}

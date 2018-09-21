@@ -1,9 +1,9 @@
 from flask import render_template, request, redirect, url_for, abort, flash
 from . import main
 from flask_login import login_required
-from .forms import UpdateProfile
+from .forms import UpdateProfile, KataForm
 from .. import db
-from ..models import User
+from ..models import User, Kata
 from ..request import get_github_user
 
 
@@ -76,3 +76,16 @@ def search(username):
         return render_template('404.html')
     title = f'search results for {username}'
     return render_template('auth/github.html', username=searched_users,title=title)
+
+@main.route('/challenges', methods=['GET','POST'])
+@login_required
+def kata():
+    form = KataForm()
+    if form.validate_on_submit():
+        kata =Kata(user=form.user.data,kata=form.kata.data,title=form.title.data)
+        kata.save_blog()
+        return redirect(url_for('main.challenges'))
+
+    posts=Kata.query.all()
+
+    return render_template('challenges.html',posts=posts, form=form)
