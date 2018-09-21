@@ -80,7 +80,7 @@ def search(username):
 
 @main.route('/challenges', methods=['GET', 'POST'])
 @login_required
-def kata():
+def challenges():
     form = KataForm()
     if form.validate_on_submit():
         kata = Kata(user=form.user.data, kata=form.kata.data, title=form.title.data)
@@ -88,12 +88,28 @@ def kata():
         return redirect(url_for('main.challenges'))
 
     posts = Kata.query.all()
+    print(posts)
 
-    return render_template('challenges.html', posts=posts, form=form)
+    return render_template('challenges.html', posts=posts, KataForm=form)
+
+
+@main.route('/kata', methods=['GET', 'POST'])
+@login_required
+def user():
+    form = KataForm()
+    if form.validate_on_submit():
+        kata = Kata(user=form.user.data, kata=form.kata.data, title=form.title.data)
+        kata.save_kata()
+        return redirect(url_for('main.challenges'))
+
+
+    return render_template('kata.html', user=user, KataForm=form)
 
 
 @main.route('/users', methods=['GET', 'POST'])
 @login_required
-def user():
-    user = User.query.filter_by().all()
+def users():
+    user = User.query.all()
+
+
     return render_template('users.html', user=user)
