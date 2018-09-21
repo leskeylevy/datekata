@@ -3,9 +3,14 @@ from datetime import datetime
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import UserMixin
 from . import db, login_manager
-from flask_dance.consumer.backend.sqla import OAuthConsumerMixin
 
 
+language_types = {u'Web development': ['Python', 'Java', 'JavaScript'],
+                 'Linux': [u'Linux', u'Linux', 'CentOS', 'Ubuntu'],
+                 u'Mobile development': [u'swift', u'java'],
+                 u'Data Science': ['MySQL', 'Redis'],
+                 u'Application Development，': [u'swift', u'ruby',u'python'],
+                 u'Web': ['Flask', 'Django'],}
 
 
 # callback function for flask-login extentsion
@@ -58,52 +63,39 @@ class User(UserMixin, db.Model):
 
 
 
-class OAuth(OAuthConsumerMixin,db.Model):
-    user_id = db.Column(db.Integer, db.ForeignKey(User.id))
-    user = db.relationship(User)
-
-
-
-
 class Follow ( db.Model ):
         __tablename__ = 'follows'
         follower_id = db.Column ( db.Integer , db.ForeignKey ( 'user.id' ) , primary_key=True )
-        followed_id = db.Column ( db.Integer , db.ForeignKey ( 'comments.id' ) , primary_key=True )
+        followed_id = db.Column ( db.Integer , db.ForeignKey ( 'user.id' ) , primary_key=True )
 
 
 
+class Language (UserMixin,db.Model ):
+    '''
+    Pitch class to define Post Objects
+    '''
+    __tablename__ = 'languages'
 
-    # class Comment ( db.Model ):
-    #     __tablename__ = 'comments'
-    #     id = db.Column ( db.Integer , primary_key=True )
-    #     content = db.Column ( db.Text )
-    #     timestamp = db.Column ( db.DateTime , default=datetime.utcnow )
-    #     author_name = db.Column ( db.String ( 64 ) )
-    #     author_email = db.Column ( db.String ( 64 ) )
-    #     avatar_hash = db.Column ( db.String ( 32 ) )
-    #     article_id = db.Column ( db.Integer , db.ForeignKey ( 'articles.id' ) )
-    #     disabled = db.Column ( db.Boolean , default=False )
-    #     comment_type = db.Column ( db.String ( 64 ) , default='comment' )
-    #     reply_to = db.Column ( db.String ( 128 ) , default='notReply' )
-    #
-    #     followed = db.relationship ( 'Follow' , foreign_keys=[Follow.follower_id] ,
-    #                                  backref=db.backref ( 'follower' , lazy='joined' ) , lazy='dynamic' ,
-    #                                  cascade='all, delete-orphan' )
-    #     followers = db.relationship ( 'Follow' , foreign_keys=[Follow.followed_id] ,
-    #                                   backref=db.backref ( 'followed' , lazy='joined' ) , lazy='dynamic' ,
-    #                                   cascade='all, delete-orphan' )
-    #
-    #     def __init__(self , **kwargs):
-    #         super ( Comment , self ).__init__ ( **kwargs )
-    #         if self.author_email is not None and self.avatar_hash is None:
-    #             self.avatar_hash = hashlib.md5 ( self.author_email.encode ( 'utf-8' ) ).hexdigest ( )
-    #
-    #     def gravatar(self , size=40 , default='identicon' , rating='g'):
-    #         # if request.is_secure:
-    #         #     url = 'https://secure.gravatar.com/avatar'
-    #         # else:
-    #         #     url = 'http://www.gravatar.com/avatar'
-    #         url = 'https://gravatar.loli.net/avatar'
-    #         hash = self.avatar_hash or hashlib.md5 ( self.author_email.encode ( 'utf-8' ) ).hexdigest ( )
-    #         return '{url}/{hash}?s={size}&d={default}&r={rating}'.format ( url=url , hash=hash , size=size ,
-    #             default=default , rating=rating )
+    id = db.Column ( db.Integer , primary_key=True )
+    languages = db.Column ( db.String )
+    category_id = db.Column ( db.Integer )
+    user_id = db.Column ( db.Integer , db.ForeignKey ( "user.id" ) )
+
+
+class LanguageCategory ( UserMixin,db.Model ):
+    '''
+    Function that defines different categories of posts
+    '''
+    __tablename__ = 'language_categories'
+
+    id = db.Column ( db.Integer , primary_key=True )
+    name_of_category = db.Column ( db.String ( 255 ) )
+    category_description = db.Column ( db.String ( 255 ) )
+
+    @classmethod
+    def get_categories(cls):
+        '''
+        This function fetches all the categories from the database
+        '''
+        categories = LanguageCategory.query.all ( )
+        return categories

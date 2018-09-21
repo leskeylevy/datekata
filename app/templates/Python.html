@@ -1,0 +1,20 @@
+{% extends 'base.html'%}
+{% import 'macros.html' as macro%}
+
+{% block content %}
+
+    <div class="container">
+        <h3>inspiration Post</h3>
+        <a href="{{url_for('main.new_users')}}">
+            <br>
+            <button>Add a new Post</button>
+        </a>
+
+        <hr>
+
+            {{macro.displayLanguagesInCategories(users,1)}}
+        <hr>
+
+    </div>
+
+{% endblock %}

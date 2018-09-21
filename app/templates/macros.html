@@ -1,0 +1,21 @@
+
+
+
+
+
+
+
+
+
+{% macro displayLanguagesInCategories(languages,id)%}
+  {% for language in users %}
+    {% if language.category_id==id%}
+        <div class="panel style="style="box-shadow: 5px 5px 5px 5px #f2f2f2; padding:10px;">
+            <p>{{language.language}}</p>
+            <!--<a href="{{url_for('main.users',id=post.id)}}">Add a Comment</a>&nbsp;&nbsp;|-->
+            <!--<a href="{{url_for('main.view_comments',id=post.id)}}">View Comments</a>&nbsp;&nbsp;|-->
+            <!--<a href="{{url_for('main.new_comment',id=post.id)}}">Vote</a>-->
+        </div>
+    {% endif%}
+  {% endfor %}
+{% endmacro%}

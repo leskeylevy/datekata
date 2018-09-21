@@ -1,6 +1,6 @@
 from app import create_app,db
 from flask_script import Manager, Server
-from app.models import User,OAuth,Follow
+from app.models import User,Language,Follow,LanguageCategory
 from  flask_migrate import Migrate, MigrateCommand
 
 # instances for the create_app
@@ -16,7 +16,7 @@ manager.add_command('db',MigrateCommand)
 
 @manager.shell
 def make_shell_context():
-    return dict(app=app, User=User,Follow=Follow,OAuth = OAuth)
+    return dict(app=app, db = db, User=User,Follow=Follow,Language=Language,LanguageCategory=LanguageCategory)
 
 
 if __name__ == '__main__':
