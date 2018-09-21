@@ -1,12 +1,13 @@
-{% macro displayKata(kata) %}
-    {% for kata in katas %}
+{% macro displayKata(posts) %}
+    {% for kata in posts %}
         <div class="list-group">
-            <p class="list-group-item list-group-item-action active">
-            {{ kata.title }}
-            </p>
+            <h3 class="">
+            Challenge Title:{{ kata.title }} by {{kata.user}}
+            </h3>
             <p class="list-group-item list-group-item-action">
                 {{ kata.kata }}
             </p>
+            <button><a href="">Try it!</a></button>
         </div>
     {% endfor %}
 {% endmacro %}

@@ -2,7 +2,9 @@
 {% import 'bootstrap/wtf.html' as wtf %}
 {% import 'macros.html' as macro %}
 {% block body %}
-    <div class="container">
-        {{ macro.displayUser(user) }}
-    </div>
+<div>
+
+    {{ wtf.quick_form(KataForm) }}
+
+</div>
 {% endblock %}

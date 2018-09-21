@@ -10,11 +10,9 @@
         <div class="row">
             <div class="col-md-1"></div>
             <div class="col-md-10">
-                {% if katas %}
-                    {{ macro.displayKata(katas) }}
-                {% else %}
-                    It appears no challenges have been published . Yet be the first to contribute to this awesome community!
-                {% endif %}
+
+                    {{ macro.displayKata(posts) }}
+
             </div>
             <div class="col-md-1"></div>
         </div>
