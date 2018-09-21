@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% import 'macros.html' as macro %}
+
+{% block body %}
+    <div class="container">
+
+                {% if users %}
+                    {{ macro.displayUser(users) }}
+                {% else %}
+                    It appears no challenges under this category has been published . Yet !
+                {% endif %}
+
+    </div>
+{% endblock %}

@@ -14,3 +14,16 @@
         </div>
     {% endfor %}
 {% endmacro %}
+{% macro displayUser(users) %}
+{% for user in users %}
+     <div class="list-group">
+            <h3 class="list-group-item list-group-item-action active">
+            {{ user.username }}
+            </h3>
+            <p class="list-group-item list-group-item-action ">
+             {{ user.language }} Genius
+            </p>
+            <p class="list-group-item list-group-item-action active"><a href="{{user.email}}">Direct message</a></p>
+     </div>
+{% endfor %}
+{% endmacro %}
