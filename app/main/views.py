@@ -75,17 +75,25 @@ def search(username):
     else:
         return render_template('404.html')
     title = f'search results for {username}'
-    return render_template('auth/github.html', username=searched_users,title=title)
+    return render_template('auth/github.html', username=searched_users, title=title)
 
-@main.route('/challenges', methods=['GET','POST'])
+
+@main.route('/challenges', methods=['GET', 'POST'])
 @login_required
 def kata():
     form = KataForm()
     if form.validate_on_submit():
-        kata =Kata(user=form.user.data,kata=form.kata.data,title=form.title.data)
+        kata = Kata(user=form.user.data, kata=form.kata.data, title=form.title.data)
         kata.save_blog()
         return redirect(url_for('main.challenges'))
 
-    posts=Kata.query.all()
+    posts = Kata.query.all()
 
-    return render_template('challenges.html',posts=posts, form=form)
+    return render_template('challenges.html', posts=posts, form=form)
+
+
+@main.route('/users', methods=['GET', 'POST'])
+@login_required
+def user():
+    user = User.query.filter_by().all()
+    return render_template('users.html', user=user)

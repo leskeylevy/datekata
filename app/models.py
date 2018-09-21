@@ -4,6 +4,7 @@ import hashlib
 from werkzeug.security import generate_password_hash, check_password_hash
 from datetime import datetime
 
+
 class Github_username:
     '''
     getting github users name to use in the login
@@ -25,6 +26,7 @@ class User(UserMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True)
     email = db.Column(db.String(64), unique=True, index=True)
     username = db.Column(db.String(64), unique=True, index=True)
+    language = db.Column(db.String(64))
     password_hash = db.Column(db.String(128))
     avatar_hash = db.Column(db.String(32))
     follows = db.relationship('Follow', backref='users', lazy='dynamic')
@@ -62,14 +64,13 @@ class User(UserMixin, db.Model):
 
 
 class Kata(db.Model):
-    ___tablename__ ='katas'
+    ___tablename__ = 'katas'
 
     id = db.Column(db.Integer, primary_key=True)
     user = db.Column(db.String)
     title = db.Column(db.String(255))
     kata = db.Column(db.String(255))
-    posted = db.Column(db.DateTime,index=True,default=datetime.utcnow)
-
+    posted = db.Column(db.DateTime, index=True, default=datetime.utcnow)
 
     def save_kata(self):
         db.session.add(self)
@@ -86,8 +87,8 @@ class Kata(db.Model):
         return katas
 
     @classmethod
-    def fetch_by_category(cls,cat):
-        katas = Kata.query.filter_by(category =cat).all()
+    def fetch_by_category(cls, cat):
+        katas = Kata.query.filter_by(category=cat).all()
 
         return katas
 
@@ -99,4 +100,3 @@ class Follow(db.Model):
 
     def __repr__(self):
         return f'Followed {self.follower_id}'
-

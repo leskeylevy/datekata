@@ -5,25 +5,21 @@
             {{ kata.title }}
             </p>
             <p class="list-group-item list-group-item-action">
-                {{ kata.kata | truncate(500) }}
-            </p>
-            <p class="list-group-item list-group-item-action disabled">
-                <a href="{{ url_for('.single_article',id = article.id) }}">continue reading . . .</a>
-                 <span class="badge badge-primary badge-pill">Posted : {{kata.posted}} </span>
+                {{ kata.kata }}
             </p>
         </div>
     {% endfor %}
 {% endmacro %}
-{% macro displayUser(users) %}
-{% for user in users %}
+{% macro displayUser(user) %}
+{% for us in user %}
      <div class="list-group">
             <h3 class="list-group-item list-group-item-action active">
-            {{ user.username }}
+            {{ us.username }}
             </h3>
             <p class="list-group-item list-group-item-action ">
-             {{ user.language }} Genius
+             {{ us.language }} Genius
             </p>
-            <p class="list-group-item list-group-item-action active"><a href="{{user.email}}">Direct message</a></p>
+            <p class="list-group-item list-group-item-action active"> Connect with {{us.username}} via {{ us.email }}</p>
      </div>
 {% endfor %}
 {% endmacro %}
